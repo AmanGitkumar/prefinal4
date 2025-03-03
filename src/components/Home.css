@@ -1,0 +1,264 @@
+/* Main Container */
+.main-container {
+  background: #dfebdf;
+  /* Consistent background */
+  padding: 235px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fortext{
+  width: 50%;
+  font-family: "alegreya-sans-sc", sans-serif;
+  font-weight: 300;
+  color: white;
+  font-size: 25px;
+  
+  font-style: italic;
+}
+/* Home Container */
+.home-container {
+  background-color: white;
+  color: #191919;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 30px;
+  padding: 50px;
+  transition: transform 0.3s;
+  position: relative;
+  top: -240px;
+  margin: 50px;
+
+  font-family: "alegreya-sans-sc", sans-serif;
+  font-weight: 300;
+  
+  font-style: italic;
+
+}
+
+.home-container:hover {
+  transform: scale(1.03);
+}
+
+/* Dark Mode */
+[data-theme="dark"] .home-container {
+  background-color: #343a40;
+  color: #ccc;
+}
+
+[data-theme="dark"] .main-container {
+  background-color: #1e1e2f;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}
+
+/* Right Side Content */
+.homeright {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Title */
+.home-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #28a745;
+  /* Consistent green accent */
+}
+
+[data-theme="dark"] .home-title {
+  color: #00ffcc;
+}
+
+/* Description */
+.home-description {
+  font-size: 28px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .home-description {
+  color: #cccccc;
+}
+
+/* Navbar Right */
+.navbar-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* Auth Links */
+.auth-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+
+.auth-links li {
+  display: inline-block;
+}
+
+/* Button Styles */
+.login-btn,
+.signup-btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Light Mode Buttons */
+.login-btn {
+  background: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.signup-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+/* Dark Mode Buttons */
+[data-theme="dark"] .login-btn {
+  color: white;
+  border-color: white;
+}
+
+[data-theme="dark"] .signup-btn {
+  background: #218838;
+}
+
+/* Hover Effects */
+.login-btn:hover {
+  background: black;
+  color: white;
+}
+
+.signup-btn:hover {
+  background: #196c2e;
+  transform: translateY(-3px);
+}
+
+/* Theme Toggle Image */
+.dayNpic {
+  /* text-align: center; */
+  /* display: flex; */
+  align-items: center;
+  /* ✅ Vertically centers the content */
+  justify-content: center;
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+  height: 35px;
+  padding: 0 9px;
+  position: relative;
+  top: 17px;
+}
+
+.daypic {
+  /* text-align: center; */
+  /* display: flex; */
+  align-items: center;
+  /* ✅ Vertically centers the content */
+  justify-content: center;
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+  height: 35px;
+  padding: 0 9px;
+
+}
+
+.daypic:hover {
+  transform: scale(1.1);
+}
+
+/* Finance Tracker Image */
+.homep {
+  height: 450px;
+  border-radius: 28px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: transform 0.3s ease;
+}
+
+.homemoney {
+  height: 125px;
+}
+
+.homemoney2 {
+  height: 95px;
+}
+
+.homeMD {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(11, 18, 58);
+  width: 130px;
+  height: 130px;
+  border-radius: 147px;
+}
+
+.MD {
+
+  display: flex;
+
+}
+
+[data-theme="dark"] .homep {
+  filter: brightness(0.8);
+}
+
+.homep:hover {
+  transform: scale(1.05);
+}
+
+/* Dark Mode Text */
+[data-theme="dark"] .signup-link {
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .homep {
+    height: 250px;
+  }
+
+  .daypic {
+    top: 15px;
+    right: 20px;
+  }
+}

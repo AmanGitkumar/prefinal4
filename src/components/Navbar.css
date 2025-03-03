@@ -1,0 +1,147 @@
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #1e1e2f, #343a40);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .navbar {
+    background: linear-gradient(135deg, #1e1e2f, #343a40);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745; /* Green for income consistency */
+    transition: transform 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+    color: #e20c2d; /* Red for expense consistency */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add hover effect with green hover and transform */
+.nav-links a:hover {
+    background: rgba(40, 167, 69, 0.2);
+    color: #28a745;
+    transform: translateY(-3px);
+}
+
+/* Active or First Link */
+.nav-links a:first-child {
+    font-weight: bold;
+    color: #e20c2d; /* Highlight first link in red */
+}
+
+/* Animated Underline */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #28a745; /* Green underline */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #e20c2d; /* Red for danger/exit action */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+    background-color: #a10c1d;
+    transform: scale(1.05);
+}
+
+/* Income & Expense Buttons */
+.income-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.income-btn:hover {
+    background-color: #218838;
+}
+
+.expense-btn {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.expense-btn:hover {
+    background-color: #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .logout-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
